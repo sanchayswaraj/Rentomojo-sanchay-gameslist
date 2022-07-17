@@ -9,6 +9,15 @@ Application Screenshot : ![website-snapshot](https://user-images.githubuserconte
 Application deployed on Netlify (link) :- https://rentomojo-sanchay-gameslist.netlify.app/
 
 
+Features :
+
+1. Use of Web API to fetch games details.
+2. Implementation of functionality to list games in a web page.
+3. Visually interactive responsive design listing all the games.
+4. A feature to Search (via name).
+5. Sort feature (to filter through ‘score’ in ascending and descending order).
+
+
 
 # Getting Started with Create React App
 
