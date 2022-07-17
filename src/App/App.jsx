@@ -9,8 +9,20 @@ const customStyles = {
         style: {
             minHeight: '50px', // override the row height
             fontSize: '20px',
+            
             backgroundColor: '#DCFFFD',
         },
+    },
+
+
+    pagination: {
+		style: {
+			fontSize: '15px',
+            fontWeight: '1000px',
+			minHeight: '56px',
+			borderTopStyle: 'solid',
+			borderTopWidth: '1px',
+		},
     },
 
     headCells: {
@@ -51,7 +63,6 @@ function App(props) {
             name: 'S.No.',
             cell: (row, index) => index + 1,
             width: "120px",
-            sortable: true,
           },
         {
             name: 'Title',
@@ -114,6 +125,7 @@ function App(props) {
                 pagination="true"
                 highlightOnHover
                 fixedHeader
+                responsive
                 fixedHeaderScrollHeight='520px'
                 customStyles={customStyles}
                 columns={columns}
