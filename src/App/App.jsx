@@ -4,10 +4,55 @@ import Search from "../Search/Search";
 import axios from "axios";
 
   
+const customStyles = {
+    rows: {
+        style: {
+            minHeight: '50px', // override the row height
+            fontSize: '20px',
+            backgroundColor: '#DCFFFD',
+        },
+    },
+
+    headCells: {
+        style: {
+            paddingLeft: '8px', // override the cell padding for head cells
+            paddingRight: '8px',
+            backgroundColor: 'black',
+            color: '#FFE5B4',
+            fontSize: '25px',
+            fontWeight: 800,
+
+        },
+    },
+    cells: {
+        style: {
+            paddingLeft: '5px', // override the cell padding for data cells
+            paddingRight: '8px',
+           
+            fontWeight: 500,
+           
+        },
+    },
+
+  
+};
+
+
+
+
+
+
 
 
 function App(props) {
     const columns = [
+
+        {
+            name: 'S.No.',
+            cell: (row, index) => index + 1,
+            width: "120px",
+            sortable: true,
+          },
         {
             name: 'Title',
             selector: row => row.title,
@@ -17,21 +62,26 @@ function App(props) {
             name: 'Platform',
             selector: row => row.platform,
             sortable: true,
+            width: "250px",
         },
         {
             name: 'Score',
             selector: row => row.score,
             sortable: true,
+            width: "150px",
         },
         {
             name: 'Genre',
             selector: row => row.genre,
             sortable: true,
+            width: "150px",
         },
         {
             name: 'Editors Choice',
             selector: row => row.editors_choice,
             sortable: true,
+            width: "220px",
+            
         },
     ];
     const [gameData, setGameData] = useState({});
@@ -60,9 +110,10 @@ function App(props) {
     return (
         <div>
             {Object.keys(gameData).length !== 0 ? <DataTable
-                title="Game List"
+               
                 pagination="true"
                 highlightOnHover
+                customStyles={customStyles}
                 columns={columns}
                 data={gameData.filter(
                     item => item.title.toLowerCase().includes(filterText.toLowerCase()) ||
