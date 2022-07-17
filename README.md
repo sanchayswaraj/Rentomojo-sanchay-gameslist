@@ -1,95 +1,70 @@
-## React Datatable Library with sort, search & pagination
-### Features
-- Select amount of entries per page
-- Search functionality with suggestions and highlighting of matches in table
-- Sort table by original model property, with optional reverse order
-- Mock data list to play around
+# Getting Started with Create React App
 
-<p align="center">
-    <img src="./public/img/Screenshot 2022-01-08 at 18.35.22.png">
-</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Stack
-- ReactJs ( >= 17.0.0 )
-- Styled Components
+## Available Scripts
 
-### Dependencies
+In the project directory, you can run:
 
+### `npm start`
 
----
-### Installation
-`npm i react-datatable-search-pagination`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
-### Customization
----
-- ENTRIES OPTION: array of number
-    - How many entries per page to display
-    - if not defined will default to [15, 30, 50]
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- TABLEHEAD: array of strings
-    - The properties of the objects from your data array you want to use in the datatable header
-    - if not defined will default to mock objects properties:
-[ 'firstName', 'lastName', 'dob', 'startDate', 'street', 'city', 'state', 'zipcode', 'department']
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- DATASRC: array of objects : The data to feed the datatable
-    - if not defined will default to mockdata json to feed the datatable
-    - if your data object model contains properties that are objects themselves, the default behavior is currently to use the first property of this object
-    => example :  
-    ```bash
-    my data object:
-    {   
-        address : 'abcd street 876',
-        state: { name: 'xy', abbreviation: 'z' } ===> datatable will only display the state name
-    } 
-    ```
-    
-- More customization to come
-    - Date formatting: currently defaults to 'MM/DD/YY'
-    - Tests
-    - Styling
+### `npm run build`
 
----
-### USE
-```bash
-import { Datatable } from  'react-datatable-search-pagination' 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-function App() {
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-// CUSTOM VALUES EXAMPLE
-const mytableHead = [ 'name', 'show', 'motto', ]
-const mydataSrc = [
-    {
-        name: 'peter griffin',
-        show: 'family guy',
-        motto: 'bird is the word'
-    },
-    {
-        name: 'saul goodman',
-        show: 'better call saul',
-        motto: 'its all good, man'
-    },
-    {
-        name: 'bojack horseman',
-        show: 'bojack horseman',
-        motto: 'help me, help you!'
-    }
-]
- 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-return (
-    <div className="App">
-        <Datatable
-            tableHead={mytableHead}
-            dataSrc={mydataSrc}
-        />
-    </div>
-);
-}
-export default App;
-```
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
