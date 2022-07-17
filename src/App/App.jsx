@@ -113,6 +113,8 @@ function App(props) {
                
                 pagination="true"
                 highlightOnHover
+                fixedHeader
+                fixedHeaderScrollHeight='520px'
                 customStyles={customStyles}
                 columns={columns}
                 data={gameData.filter(
@@ -121,7 +123,7 @@ function App(props) {
                         item.genre.toLowerCase().includes(filterText.toLowerCase())
                 )}
                 subHeader
-                subHeaderComponent={subHeaderComponentMemo} /> : <div>loading..</div>}
+                subHeaderComponent={subHeaderComponentMemo} /> : <div>loading...</div>}
 
         </div>
     );
